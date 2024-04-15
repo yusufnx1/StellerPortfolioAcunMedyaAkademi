@@ -1,0 +1,24 @@
+﻿@model StellerPortfolioAcunMedyaAkademi.Models.TblContact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>İletişim Bilgisi Güncelleme Sayfası</h3>
+
+<form class="form-group" method="post">
+    @Html.HiddenFor(x=>x.ContactId)
+    <label>Lokasyonunuz </label>
+    @Html.TextBoxFor(x => x.Location, new { @class = "form-control" })
+    <br />
+    <label>Telefon Numaranız</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>E-Posta Adresiniz </label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Google Maps Adresiniz </label>
+    @Html.TextBoxFor(x => x.GoogleMap, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

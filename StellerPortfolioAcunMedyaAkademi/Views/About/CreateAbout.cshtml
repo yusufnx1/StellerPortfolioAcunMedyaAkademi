@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Hakkımızda Yazısı Ekleme Sayfası</h3>
+
+<form class="form-group" method="post">
+    <label>Resim Url</label>
+    <input type="text" name="ImageUrl" class="form-control" placeholder="Lütfen Boş Bırakmayınız." />
+    <br />
+    <label>Adınız Soyadınız</label>
+    <input type="text" name="NameSurname" class="form-control" placeholder="Lütfen Boş Bırakmayınız."/>
+    <br />
+    <label>Ünvan</label>
+    <input type="text" name="Title" class="form-control" placeholder="Lütfen Boş Bırakmayınız."/>
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" placeholder="Lütfen Boş Bırakmayınız."/>
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

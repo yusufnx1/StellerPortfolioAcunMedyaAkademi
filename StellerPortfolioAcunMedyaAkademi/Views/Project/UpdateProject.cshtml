@@ -1,0 +1,24 @@
+﻿@model StellerPortfolioAcunMedyaAkademi.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Proje Güncelleme Sayfası</h3>
+
+<form class="form-group" method="post">
+    <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+    <label>Proje Adı</label>
+    <input type="text" name="ProjectName" value="@Model.ProjectName" class="form-control" placeholder="Lütfen boş bırakmayınız." />
+    <br />
+    <label>Github Link</label>
+    <input type="text" name="GithubUrl" value="@Model.GithubUrl" class="form-control" placeholder="Lütfen boş bırakmayınız." />
+    <br />
+    <label>Resim Dosya Yolu</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" placeholder="Lütfen boş bırakmayınız." />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" @Model.Description class="form-control" placeholder="Lütfen boş bırakmayınız." />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@model StellerPortfolioAcunMedyaAkademi.Models.TblTestimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Referans Ekleme Sayfası</h3>
+
+<form class="form-group" method="post">
+    <input type="hidden" name="TestimonialID" value="@Model.TestimonialID"/>
+    <label>Adı Soyadı</label>
+    <input type="text" name="NameSurname" value="@Model.NameSurname" class="form-control" placeholder="Lütfen Boş Bırakmayınız." />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" value="@Model.Title" class="form-control" placeholder="Lütfen Boş Bırakmayınız." />
+    <br />
+    <label>Resim Dosya Yolu</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" placeholder="Lütfen Boş Bırakmayınız." />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" value="@Model.Description" class="form-control" placeholder="Lütfen Boş Bırakmayınız." />
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

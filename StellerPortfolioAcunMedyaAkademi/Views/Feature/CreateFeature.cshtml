@@ -1,0 +1,26 @@
+﻿@model StellerPortfolioAcunMedyaAkademi.Models.TblFeature
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Öne Çıkanlar Ekleme Sayfası</h3>
+
+<form class="form-group" method="post">
+    <label>Resim Url</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Adınız Soyadınız</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Job, new { @class = "form-control" })
+    <br />
+    <label>Cv Link</label>
+    @Html.TextBoxFor(x => x.CvDownloadUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

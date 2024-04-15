@@ -1,0 +1,29 @@
+﻿@model List<StellerPortfolioAcunMedyaAkademi.Models.TblTestimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Referans Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Unvan</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Testimonial/CreateTestimonial" class="btn btn-primary">Yeni Referans Ekle</a>
